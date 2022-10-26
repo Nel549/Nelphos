@@ -1,0 +1,184 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="landing-dektop screen">
+    <div class="header-1">
+      <div class="column-1">
+        <div class="content">
+          <div class="we-help-photographer roboto-bold-white-42px">
+            <span class="roboto-bold-black-42px">We help photographers generate a passive </span
+            ><span class="roboto-bold-outrageous-orange-42px">income</span
+            ><span class="roboto-bold-black-42px"> online</span>
+          </div>
+          <div class="create-your-presets roboto-normal-black-18px">
+            Create your presets, sell them and make money<br /><br />We change this by createing a marketplace where
+            photographers can sell their creative products online!
+          </div>
+        </div>
+        <div class="actions">
+          <a href="{% url 'register' %}" class="button-2"><div class="start-selling roboto-normal-concrete-16px">Start selling</div></a>
+          <div class="or roboto-normal-black-18px">Or</div>
+          <div class="button-3">
+            <a href="{% url 'presets' %}" class="explore-the-marketplace roboto-normal-black-16px">Explore the marketplace</a>
+          </div>
+        </div>
+      </div>
+      <div class="content-2">
+        <img class="placeholder-image-1" src="{% static 'img/placeholder---image@1x.png' %}" alt="Placeholder / Image" />
+      </div>
+    </div>
+    <div class="features">
+      <div class="section-title">
+        <div class="content">
+          <div class="how-does-it-works roboto-bold-eerie-black-48px">How does it works?</div>
+          <div class="we-love-to-keep-the roboto-normal-eerie-black-18px">
+            We love to keep the process as easy as follows:
+          </div>
+        </div>
+      </div>
+      <div class="content-3">
+        <div class="row">
+          <div class="column-2">
+            <img class="image" src="{% static 'img/image@2x.png' %}" alt="IMAGE" />
+            <div class="content">
+              <div class="create-a-lightroom-preset roboto-bold-black-32px">Create a lightroom preset</div>
+              <p class="create-a-preset-that roboto-normal-black-16px">
+                Create a preset that you find other photographers will love to use for their photos
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <img class="file no_color" style="
+            left: 0%;
+            right: 0%;
+            top: 16.67%;
+            bottom: 16.67%;
+            
+            background: #F76036;" src="{% static 'img/file@2x.png' %}" alt="FILE" />
+            <div class="content">
+              <div class="upload-your-favorite-presets roboto-bold-black-32px">Upload your favorite presets</div>
+              <p class="create-an-account-an roboto-normal-black-16px">
+                Create an account and upload your preset to the platform
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <img class="group" src="{% static 'img/group@2x.png' %}" alt="Group" />
+            <div class="content-4">
+              <div class="start-selling-1 roboto-bold-black-32px">Start selling</div>
+              <p class="according-to-how-goo roboto-normal-black-16px">
+                According to how good and how valuable your preset is for the community you will be rewarded with 90%
+                of the total price of your preset
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="actions-1">
+          <a href="{% url 'register' %}" class="button"><div class="start-selling-2 roboto-normal-white-16px">Start selling!</div></a>
+        </div>
+      </div>
+    </div>
+    <div class="presets">
+      <div class="title">
+        <div class="section-title-1">
+          <div class="tagline roboto-semi-bold-eerie-black-16px">Create. Share. Earn</div>
+          <div class="content-5">
+            <div class="latest-presets roboto-bold-eerie-black-48px">
+              Tired of spending hours choosing the right settings?
+            </div>
+            <div class="choose-from-our-creators">
+              <span class="span0">Check some pre-made edits </span
+              ><span class="roboto-normal-eerie-black-18px">and take your photos to the next level!</span>
+            </div>
+          </div>
+        </div>
+        <a href="{% url 'presets' %}" class="button-4"><div class="view-all roboto-normal-eerie-black-16px">View all</div></a>
+      </div>
+      <div class="content-6">
+        <div class="content-7">
+          <div class="content-8">
+            {% for p in presets%}
+            <div class="product">
+              <img class="placeholder-image" src="{{p.cover.url}}" alt="{{p.name}}" />
+              <div class="content-1">
+                <div class="header">
+                  <div class="product-name roboto-semi-bold-eerie-black-18px">{{p.name}}</div>
+                  <div class="user roboto-normal-eerie-black-14px">{{p.user.username}}</div>
+                </div>
+                <div class="price roboto-semi-bold-black-20px">${{p.price}}</div>
+              </div>
+              <div class="text-2 roboto-normal-white-14px">⭐⭐⭐⭐⭐</div>
+              <a href="{% url 'preset-detail' p.id %}" class="button-1"><div class="looks-cool roboto-normal-white-16px">Looks cool!</div></a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="container">
+        <div class="section-title-2">
+          <div class="fa-qs roboto-bold-black-48px">FAQs</div>
+          <div class="if-you-find-our-serv roboto-normal-black-18px">
+            If you find our service confusing, or our copywriter handn’t done a great job explaining, check some FAQs
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-item">
+            <div class="question-text-goes-here roboto-bold-black-18px">Question text goes here</div>
+            <p class="lorem-ipsum-dolor-si roboto-normal-black-16px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
+              posuere.
+            </p>
+          </div>
+          <div class="list-item">
+            <div class="question-text-goes-here roboto-bold-black-18px">Question text goes here</div>
+            <p class="lorem-ipsum-dolor-si roboto-normal-black-16px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
+              posuere.
+            </p>
+          </div>
+          <div class="list-item">
+            <div class="question-text-goes-here roboto-bold-black-18px">Question text goes here</div>
+            <p class="lorem-ipsum-dolor-si roboto-normal-black-16px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
+              posuere.
+            </p>
+          </div>
+          <div class="list-item">
+            <div class="question-text-goes-here roboto-bold-black-18px">Question text goes here</div>
+            <p class="lorem-ipsum-dolor-si roboto-normal-black-16px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+              tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+              erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
+              posuere.
+            </p>
+          </div>
+        </div>
+        <div class="content-9">
+          <div class="content-10">
+            <div class="still-have-a-question roboto-bold-black-32px">Still have a question?</div>
+            <div class="dont-hesitate-to-co roboto-normal-black-18px">
+              Don’t hesitate to contant us <br />We won’t let you wait!
+            </div>
+          </div>
+        </div>
+        <a href="{% url 'contact' %}" class="button"><div class="contact-us roboto-normal-white-16px">Contact us</div></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  {% endblock %}

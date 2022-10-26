@@ -1,0 +1,16 @@
+{% autoescape off %}
+
+Hello {{user.username}},
+
+This is a password reset request
+
+{{protocol}}://{{domain}}{% url 'password_reset_confirm' uidb64=uid token=token %}
+
+Your username is: {{user.username}}
+
+Sincerrely,
+
+The Nelphos Team
+
+
+{% endautoescape %}

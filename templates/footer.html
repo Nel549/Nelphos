@@ -1,0 +1,43 @@
+
+{% load static %}
+
+
+{% block content %}
+
+<div style="margin: 0; background: #ffffff">
+  <div class="footer-desktop screen">
+    <div class="content">
+      <div class="logo">
+        <img
+          class="nephos_-_-logo-removebg-preview-1"
+          src="{% static 'img/nephos---logo-removebg-preview-1@2x.png' %}"
+          alt="Nephos_-_Logo-removebg-preview 1"
+        />
+      </div>
+      <div class="navbar roboto-semi-bold-black-16px">
+        <a class="navbar-link" href="{% url 'home' %}">Home</a>
+        <a class="navbar-link" href="{% url 'presets' %}">Presets</a>
+        <a class="navbar-link" href="{% url 'preset-add'  %}">Upload preset</a>
+        <a class="navbar-link" href="{% url 'contact' %}">Contact</a>
+        <a class="navbar-link" href="{% url 'about' %}">About</a>
+      </div>
+    </div>
+    <div class="credits">
+      <div class="divider"></div>
+      <div class="row">
+        <div class="slogan roboto-bold-black-14px">Create. Share. Earn.</div>
+        <div class="footer-links roboto-normal-black-14px">
+          <div class="footer-links-item">Privacy Policy</div>
+          <div class="footer-links-item">Terms of Service</div>
+          <div class="footer-links-item">Cookies Settings</div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  
+
+
+{% endblock %}
+

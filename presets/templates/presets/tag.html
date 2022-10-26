@@ -1,0 +1,90 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}{{tag.name}}{% endblock %}
+
+{% block content %}
+
+<main class="presets-desktop-all-breakpoints screen" name="form74" action="form74" method="post">
+    {% if messages %}
+  
+    {% for msg in messages %}
+    <div role="alert">
+        <p>{{msg}}</p>
+    </div>
+    {% endfor %}
+  
+    {% endif %}
+  
+      
+      <div class="presets-section">
+       
+        <div class="frame-1">
+        <div class="tags-list">
+            <div class="row"><div class="tags">{{tag.name}}</div></div>
+        </div>
+        <div class="presets">
+          <div class="content ">
+              {% for i in items %}
+  
+              <div class="product product_data">
+                <input type="hidden" value="{{i.id}}" class="product_id">
+                {% csrf_token %}
+  
+            
+                <img href="{% url 'preset-detail' i.id %}" class="placeholder-image" src="{{i.cover.url}}" alt="{{i.name}}" />
+  
+                
+                <div class="content-1">
+                  <div class="header">
+                    <a href="{% url 'preset-detail' i.id %}" class="product-name inter-semi-bold-black-18px">{{i.name}}</a>
+                    <a href="{% url 'profiles' i.seller.username %}" class="user inter-regular-normal-black-14px">{{i.seller.username}}</a>
+                  </div>
+                  <div class="price inter-semi-bold-black-20px">${{i.price}}</div>
+                </div>
+                <div class="text-40 inter-regular-normal-white-14px">{{i.rateing}}⭐</div>
+  
+                {% if request.user.is_authenticated and request.user == i.seller %}
+  
+                <a href = "{% url 'edit_preset' i.id %}"class="OrangeBtn">
+                  <div class="button">
+                    <div class="add-to-cart inter-regular-normal-white-16px">You sell this product!</div>
+                  </div>
+                </a>
+  
+                {% elif request.user.is_authenticated and i in library and request.user != i.seller %}
+  
+                <a href="{{i.file.url}}" class="OrangeBtn">
+                  <div class="button">
+                    <div class="add-to-cart inter-regular-normal-white-16px">Download</div>
+                  </div>
+                </a>
+  
+                {% elif request.user.is_authenticated and request.user != i.seller %}
+  
+                <a class="addToCartBtn OrangeBtn">
+                  <div class="button">
+                    <div class="add-to-cart inter-regular-normal-white-16px">Add to cart</div>
+                  </div>
+                </a>
+  
+                {% else %}
+  
+                <a href="{% url 'login' %}" class="OrangeBtn">
+                  <div class="button">
+                    <div class="add-to-cart inter-regular-normal-white-16px">Add to cart</div>
+                  </div>
+                </a>
+  
+                {% endif %}
+  
+              </div>
+          
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+  </main>
+  
+
+{% endblock %}

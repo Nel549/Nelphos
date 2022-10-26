@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+Someone with the name of {{name}}, wants to Contact you
+
+{{name}} mailed you with the email: {{email}} and with the message:
+
+{{msg}}
+
+{% endautoescape %}

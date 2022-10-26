@@ -1,0 +1,112 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+<main class="presets-desktop-all-breakpoints screen" name="form74" action="form74" method="post">
+  {% if messages %}
+
+  {% for msg in messages %}
+  <div role="alert">
+      <p>{{msg}}</p>
+  </div>
+  {% endfor %}
+
+  {% endif %}
+
+    <div class="header-1">
+      <small>Create, share, earn</small>
+      <h1 class="heading">This is the market place you’ve been looking for</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
+      <div class="btns">
+        <a class= "btnCart" href="{% url 'cart' request.user %}">Cart</a>
+        <a class= "btnSharePreset" href="{% url 'preset-add' %}">Share a preset</a>
+      </div>
+    </div>
+    <div class="presets-section">
+      <div class="search-bar">
+        
+      <form method="get">
+        <input class="search-for-the-best"type="text" name="q" placeholder="Search preset"/>
+          <a ><input type="image" value="Search" class="icon-search" src="{% static 'img/action-1@2x.png' %}" alt="submit" /></input></a>
+      </form>
+      </div>
+      <div class="frame-1">
+      <div class="tags-list">
+          <div class="row"><div class="tags">Tags</div></div>
+          <div class="showing-0-of-100 inter-regular-normal-black-14px">Showing 0 of 100</div>
+          <div class="categories">
+            {% for t in tags %}
+           
+
+            <div class="text-wrapper"><a href="{% url 'tag' t.name %}" class="tag inter-regular-normal-black-16px">{{t.name}}</a></div>
+
+            {% endfor %}
+          </div>
+      </div>
+      <div class="presets">
+        <div class="content ">
+            {% for i in items %}
+
+            <div class="product product_data">
+              <input type="hidden" value="{{i.id}}" class="product_id">
+              {% csrf_token %}
+
+          
+              <img href="{% url 'preset-detail' i.id %}" class="placeholder-image" src="{{i.cover.url}}" alt="{{i.name}}" />
+
+              
+              <div class="content-1">
+                <div class="header">
+                  <a href="{% url 'preset-detail' i.id %}" class="product-name inter-semi-bold-black-18px">{{i.name}}</a>
+                  <a href="{% url 'profiles' i.seller.username %}" class="user inter-regular-normal-black-14px">{{i.seller.username}}</a>
+                </div>
+                <div class="price inter-semi-bold-black-20px">${{i.price}}</div>
+              </div>
+              <!--<div class="text-40 inter-regular-normal-white-14px">{{i.rateing}}⭐</div>-->
+
+              {% if request.user.is_authenticated and request.user == i.seller %}
+
+              <a href = "{% url 'edit_preset' i.id %}"class="OrangeBtn">
+                <div class="button">
+                  <div class="add-to-cart inter-regular-normal-white-16px">You sell this product!</div>
+                </div>
+              </a>
+
+              {% elif request.user.is_authenticated and i in library and request.user != i.seller %}
+
+              <a href="{{i.file.url}}" class="OrangeBtn">
+                <div class="button">
+                  <div class="add-to-cart inter-regular-normal-white-16px">Download</div>
+                </div>
+              </a>
+
+              {% elif request.user.is_authenticated and request.user != i.seller %}
+
+              <a class="addToCartBtn OrangeBtn">
+                <div class="button">
+                  <div class="add-to-cart inter-regular-normal-white-16px">Add to cart</div>
+                </div>
+              </a>
+
+              {% else %}
+
+              <a href="{% url 'login' %}" class="OrangeBtn">
+                <div class="button">
+                  <div class="add-to-cart inter-regular-normal-white-16px">Add to cart</div>
+                </div>
+              </a>
+
+              {% endif %}
+
+            </div>
+        
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+</main>
+
+  {% endblock %}

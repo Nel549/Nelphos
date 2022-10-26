@@ -1,0 +1,143 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+
+
+<div class="settings-desktop screen" >
+    <div class="content">
+      <div class="settings roboto-bold-black-42px">Settings</div>
+      <img class="line-1" src="{% static 'img/line-12@1x.png' %}" alt="Line" />
+      <div class="settings-section">
+        
+        <div class="sidebar">
+          <div class="profile">Profile</div>
+          {% if profile.profileImage %}
+          <img class="profile-image" src="{{profile.profileImage.url}}" alt="Profile image" />
+          {% else %}
+          <img class="profile-image" src="{% static 'img\Default-profile.png' %}" alt="Profile image" />
+          {% endif %}
+
+          <div class="place roboto-normal-black-28px">{{user.username}}</div>
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <label for="file_input" >
+              <div class="button">
+                <div class="update-profile-foto roboto-normal-black-16px">Update profile foto</div> 
+              </div>
+            </label>
+            {{form_image.profileImage}}
+            <input type="submit" value="Save" name="Save"  class="button-1 save roboto-normal-white-16px">
+          </form>
+            
+        </div>
+
+        <img class="line-2" src="{% static 'img/line-7@1x.png' %}" alt="Line" />
+        <div class="section">
+          <form method="post" class="generic-information" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="header-row">
+              <div class="generic-information-1 roboto-semi-bold-black-32px">Generic information</div>
+              <div class="buttons">
+                <a >
+                  <div class="button"><a href="{% url 'profiles' user.username %}" class="cancel roboto-normal-black-16px">Cancel</a></div></a
+                >
+                <input type="submit" value="Update" name="Update" class="button-1 save roboto-normal-white-16px">
+              </div>
+            </div>
+            <img class="line" src="{% static 'img/line-14@1x.png' %}" alt="Line" />
+            <div class="bio">
+                {{form_generic.bio}}
+            </div>
+            <div class="row">
+              <div class="instagram">
+                {{form_generic.instagram_link}}
+              </div>
+              <div class="fb">
+                {{form_generic.facebook_link}}
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="pinterest">
+                {{form_generic.pinterest_link}}
+              </div>
+              <div class="tiktok">
+                {{form_generic.tiktok_link}}
+              </div>
+              <div class="tiktok-1">
+                {{form_generic.twitter_link}}
+              </div>
+            </div>
+          </form>
+
+          <form method="post" class="section-item">
+            {% csrf_token %}
+            <div class="header-row">
+              <div class="user-informatoin roboto-semi-bold-black-32px">User informatoin</div>
+              <div class="buttons">
+                <a href="{% url 'profiles' user.username %}">
+                  <div class="button"><div class="cancel-1 roboto-normal-black-16px">Cancel</div></div></a
+                >
+                <a href="javascript:SubmitForm('form12')">
+                  <input type="submit" value="Save information" name="Save information" class="button-1 save roboto-normal-white-16px">
+                </a>
+              </div>
+            </div>
+            <img class="line" src="{% static 'img/line-14@1x.png' %}" alt="Line" />
+            <div class="section-item-item">
+              <div class="instagram-1">
+                {{form_user.username}}
+              </div>
+              <div class="fb-1">
+                {{form_user.email}}
+              </div>
+            </div>
+            <div class="section-item-item">
+              <div class="pinterest-1">
+                {{form_user.first_name}}
+              </div>
+              <div class="tiktok-2">
+                {{form_user.last_name}}
+              </div>
+            </div>
+          </form>
+
+          <form method="post" class="section-item">
+            <div class="header-row">
+              <div class="password roboto-semi-bold-black-32px">Password</div>
+              <div class="buttons">
+                <a href="javascript:SubmitForm('form12')">
+                  <div class="button"><div class="cancel-2 roboto-normal-black-16px">Cancel</div></div></a
+                ><a href="javascript:SubmitForm('form12')">
+                  <div class="button-1"><div class="confirm roboto-normal-white-16px">Confirm</div></div></a
+                >
+              </div>
+            </div>
+            <img class="line" src="{% static 'img/line-14@1x.png' %}" alt="Line" />
+       
+            <div class="forgot-password roboto-normal-black-28px">Forgot password?</div>
+            <a href="{% url 'password_change' request.user %}">
+              <div class="button"><div class="reset-here roboto-normal-black-16px">Reset here</div></div></a
+            >
+          </form>
+
+          <div class="section-item">
+            <div class="header-row-1">
+              <div class="delete-account roboto-semi-bold-black-32px">Delete account</div>
+            </div>
+            <img class="line" src="{% static 'img/line-14@1x.png' %}" alt="Line" />
+            <a href="{% url 'delete' request.user %}">
+              <div class="button-2">
+                <div class="delte-account-here roboto-normal-white-16px">Delte account here</div>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+/* screen - footer-desktop */
+
+.footer-desktop {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+
+  height: 328px;
+
+  min-width: 1280px;
+  padding: 48px 0px 80px;
+  width: 100%;
+}
+
+.footer-desktop .content {
+  align-items: center;
+
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: fit-content;
+}
+
+.footer-desktop .logo {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+}
+
+.footer-desktop .nephos_-_-logo-removebg-preview-1 {
+  height: 58px;
+  min-width: 107px;
+  object-fit: cover;
+}
+
+.footer-desktop .navbar {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  gap: 32px;
+  width: fit-content;
+}
+
+.footer-desktop .navbar-link {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.footer-desktop .credits {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 1280px;
+}
+
+.footer-desktop .divider {
+  align-self: stretch;
+  background-color: var(--black);
+  border: 1px none;
+  height: 1px;
+  min-width: 1280px;
+}
+
+.footer-desktop .row {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 24px;
+}
+
+.footer-desktop .slogan {
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.footer-desktop .footer-links {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  gap: 24px;
+  width: fit-content;
+}
+
+.footer-desktop .footer-links-item {
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  text-decoration: underline;
+  white-space: nowrap;
+  width: fit-content;
+}

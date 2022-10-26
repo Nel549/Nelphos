@@ -1,0 +1,76 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+
+{% block content %}
+
+<div class="signin-desktop-all-breakpoints screen">
+    <div class="sign-up-7">
+      <div class="column">
+        <div class="content">
+          <div class="section-title">
+            <div class="sign-up roboto-bold-black-48px">Sign Up</div>
+            <div class="become-a-part-of-the-community roboto-normal-black-18px">Become a part of the community!</div>
+          </div>
+          <form method="post" class="form">
+            {% csrf_token %}
+            <div class="input">
+              <div class="username roboto-normal-black-16px">Username*</div>
+              <div class="input-1">
+                {{form.username}}
+              </div>
+            </div>
+            <div class="input">
+              <div class="first-name roboto-normal-black-16px">First name*</div>
+              <div class="input-1">
+                {{form.first_name}}
+              </div>
+            </div>
+            <div class="input">
+              <div class="last-name roboto-normal-black-16px">Last name*</div>
+              <div class="input-1">
+                {{form.last_name}}
+              </div>
+            </div>
+            <div class="input">
+              <div class="email roboto-normal-black-16px">Email*</div>
+              <div class="input-1">
+                {{form.email}}
+              </div>
+            </div>
+            <div class="input">
+              <div class="password roboto-normal-black-16px">Password*</div>
+              <div class="input-1">
+                {{form.password1}}
+              </div>
+            </div>
+            <div class="input">
+              <div class="confirm-password roboto-normal-black-16px">Confirm password*</div>
+              <div class="input-1">
+                {{form.password2}}
+              </div>
+            </div>
+            <div class="buttons">
+            <a>
+                <button type="submit" value="Register" class="button"><div class="sign-up-1 roboto-normal-white-16px">Sign Up</div></button>
+            </a>
+            </div>
+            <div class="content-1 roboto-normal-black-16px">
+              <div class="already-have-an-account">Already have an account?</div>
+              <a class="log-in" href="{% url 'login' %}">Log In</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <img
+        class="gabe-hobbs-py3w-hdj-ma-ai-unsplash-1"
+        src="{% static 'img/gabe-hobbs-py3whdjmaai-unsplash-1@1x.png' %}"
+        alt="gabe-hobbs-Py3wHdjMaAI-unsplash 1"
+      />
+    </div>
+  </div>
+
+{% endblock %}
+

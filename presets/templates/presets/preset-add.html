@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+
+<div class="preset-upload-desktop screen" >
+  <form method="post" enctype="multipart/form-data"  class="contact-9">
+      {% csrf_token %}
+      <label for="file_input">
+          <img class="placeholder-image cover" src="{% static 'img/placeholder---image@1x.png' %}" alt="Placeholder / Image" />
+      </label>
+      {{form.cover}}
+
+      <div class="content">
+        <div class="section-title">
+          <div class="content-1">
+            <div class="upload-preset roboto-bold-black-48px">Upload preset</div>
+            <div class="help-the-community-w roboto-normal-black-18px">Help the community with your best preset</div>
+          </div>
+        </div>
+          <div >
+            <div class="input">
+            <div class="name-of-the-preset roboto-normal-black-16px">Name of the preset</div>
+            <div class="search-bar">
+              {{form.name}}
+            </div>
+            </div>
+            <div class="input">
+            <div class="file roboto-normal-black-16px">File</div>
+            <div class="search-bar-1">
+                {{form.file}}
+              <input  type="image" style="background-color: black;" class="icon-upload_arrow" src="{% static 'img/file@2x.png' %}" alt="icon-upload_arrow" />
+            </div>
+            </div>
+            <div class="input">
+            <div class="surname roboto-normal-black-16px">Price</div>
+            <div class="search-bar-2">
+              <img class="editor" src="{% static 'img/editor@2x.png' %}" alt="EDITOR" />
+              {{form.price}}
+            </div>
+            </div>
+            <div class="input">
+            <div class="description roboto-normal-black-16px">Description</div>
+            <div class="search-bar-3">
+              {{form.description}}
+            </div>
+            </div>
+            <div class="input"><div class="tags roboto-normal-black-16px">Tags</div></div>
+            <div class="tag-input">
+            {{form.tags}}
+          </div>
+          <!--
+            <div class="checkbox-button">
+            <a href="javascript:SubmitForm('form49')"> <div class="checkbox"></div></a>
+            <div class="i-accept-the-terms roboto-normal-black-14px">I accept the terms</div>
+          </div>
+          -->        
+            <input type="submit" style="color: white;" class="button">
+        </div>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

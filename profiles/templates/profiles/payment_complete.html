@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block title %}Payment result{% endblock %}
+
+{% block content %}
+
+<main>
+    <h1>Payment done!</h1>
+    <a href="{% url 'profiles' request.user %}">Profile</a>
+</main>
+
+{% endblock %}

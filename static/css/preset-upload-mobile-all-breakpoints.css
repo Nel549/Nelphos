@@ -1,0 +1,325 @@
+/* screen - preset-upload-desktop */
+
+.preset-upload-desktop {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  gap: 10px;
+  height: 100vh;
+  min-height: 1522px;
+  min-width: 1512px;
+  width: 100%;
+}
+
+.preset-upload-desktop .contact-9 {
+  align-items: center;
+  background-color: var(--concrete);
+  border: 1px none;
+  display: flex;
+  flex: 1;
+  gap: 80px;
+  height: 1522px;
+  padding: 112px 64px;
+}
+
+.preset-upload-desktop .placeholder-image {
+  align-self: stretch;
+  flex: 1;
+  height: 1298px;
+  max-width: 652px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.preset-upload-desktop .content {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 53px;
+}
+
+.preset-upload-desktop .section-title {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preset-upload-desktop .hidden_input {
+  visibility: hidden;
+
+}
+
+.preset-upload-desktop .content-1 {
+  align-items: center;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preset-upload-desktop .upload-preset {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 57.6px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .help-the-community-w {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .form {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.preset-upload-desktop .input {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.preset-upload-desktop .name-of-the-preset {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .search-bar {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 19px #00000040;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+}
+
+.preset-upload-desktop .text {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  min-width: 632px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .text::placeholder {
+  color: #4f4f4f99;
+}
+
+.preset-upload-desktop .file {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .search-bar-1 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 19px #00000040;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.preset-upload-desktop .icon-upload_arrow {
+  height: 24px;
+  min-width: 24px;
+}
+
+.preset-upload-desktop .surname {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .search-bar-2 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 19px #00000040;
+  display: flex;
+  padding: 10px 0px 10px 10px;
+  width: 152px;
+}
+
+.preset-upload-desktop .editor {
+  height: 24px;
+  min-width: 24px;
+}
+
+.preset-upload-desktop .text-1 {
+  background-color: transparent;
+  border: 0;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  min-width: 27px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .text-1::placeholder {
+  color: #4f4f4f99;
+}
+
+.preset-upload-desktop .description {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .search-bar-3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 19px #00000040;
+  display: flex;
+  gap: 26px;
+  height: 202px;
+  padding: 10px 10px 168px;
+}
+
+.preset-upload-desktop .text-2 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 177px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-bottom: -152.00px;
+  margin-top: -1.00px;
+  min-width: 632px;
+  padding: 0;
+}
+
+.preset-upload-desktop .text-2::placeholder {
+  color: #4f4f4f99;
+}
+
+.preset-upload-desktop .tags {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .tag-input {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 4px;
+  box-shadow: 3px 4px 19px #00000040;
+  display: flex;
+  gap: 8px;
+  height: 42px;
+  overflow: hidden;
+  padding: 0px 8px;
+}
+
+.preset-upload-desktop .text-3 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  min-width: 636px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.preset-upload-desktop .text-3::placeholder {
+  color: #4f4f4f99;
+}
+
+.preset-upload-desktop .checkbox-button {
+  align-items: center;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  gap: 8px;
+}
+
+.preset-upload-desktop .checkbox {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black);
+  cursor: pointer;
+  height: 16px;
+  min-width: 16px;
+}
+
+.preset-upload-desktop .i-accept-the-terms {
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.preset-upload-desktop .button {
+  align-items: center;
+  background-color: var(--outrageous-orange);
+  border: 1px none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 8px 20px;
+  width: fit-content;
+}
+
+.preset-upload-desktop .upload {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+

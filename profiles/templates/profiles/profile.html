@@ -1,0 +1,133 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+
+
+<div class="profile-owner-desktop-all-breakpoints screen">
+    <div class="content-1 roboto-bold-black-28px">
+      <div class="profile-page">
+        <div class="collumn-1">
+            {% if image %}
+            <img src="{{image.url}}" style="max-width: 500px;" alt="Image">
+            {% else %}
+            <img src="{% static 'img/Default-profile.png' %}" alt="Image">
+            {% endif %}
+
+            {% if request.user == user %}
+            <a href="{% url 'settings' user.username %}">
+            <div class="edit"><div class="settings roboto-normal-white-16px">Settings</div></div></a
+            ><a href="{% url 'preset-add' %}">
+            <div class="edit-1"><div class="settings-1 roboto-normal-black-16px">Share a preset</div></div></a
+            ><a href="{% url 'cart' user.username %}">
+            <div class="button-2">
+              <div class="cart roboto-normal-black-16px">Cart</div>
+              <img class="icon-cart" src="{% static 'img/action-1@2x.png' %}" alt="icon-cart" /></div
+            ></a>
+            {% endif %}
+        </div>
+        <div class="collumn-2">
+          <div class="place roboto-bold-black-28px">{{user.username}}</div>
+          {% if bio %}
+          <div class="bio roboto-normal-black-24px">
+            {{bio}}
+          </div>
+          {% endif %}
+          <img class="vector-1" src="{% static 'img/vector-1-3@2x.png' %}" alt="Vector 1" />
+          <div class="social-icons">
+
+            {% if f_link %}
+            <a href="https://{{f_link}}" target="_blank">
+              <img class="social-icons-item" src="{% static 'img/facebook---original@2x.png' %}" alt="icon-facebook" />
+            </a>
+           
+            {% endif %}
+
+            {% if tw_link %}
+
+            <a href="https://{{tw_link}}" target="_blank">
+              <img class="social-icons-item" src="{% static 'img/twitter---original@2x.png' %}" alt="icon-twitter" />
+            </a>
+            {% endif %}
+
+            {% if i_link %}
+
+            <a href="https://{{i_link}}" target="_blank">
+             
+              <img class="social-icons-item" src="{% static 'img/instagram---original@2x.png' %}" alt="icon-instagram" />
+            </a>
+            {% endif %}
+
+            {% if p_link %}
+
+            <a href="https://{{p_link}}" target="_blank">
+              <img class="social-icons-item" src="{% static 'img/pinterest---original-1@2x.png' %}" alt="Pinterest - Original" />
+            </a>
+            {% endif %}
+
+            {% if t_link %}
+
+            <a href="{{t_link}}" target="_blank">
+              <img class="social-icons-item" src="{% static 'img/tiktok---original-1@2x.png' %}" alt="TikTok - Original" />
+            </a>
+            
+            {% endif %}
+        
+        </div>
+          {% if request.user == user %}
+            <a href="{% url 'logout' %}">
+                <div class="button-2">
+                <div class="cart roboto-normal-black-16px">Log out</div>
+                </div>
+            </a>
+            {% endif %}
+        </div>
+      </div>
+
+      {% if request.user == user %}
+      <div class="content-item">
+        <div class="your-presets">Your presets</div>
+        <img class="vector-1" src="{% static 'img/vector-1-4@2x.png' %}" alt="Vector 1" />
+        <div class="products">
+          {% for p in presets%}
+          <div class="product">
+            <img class="placeholder-image" src="{{p.cover.url}}" alt="Placeholder / Image" />
+            <div class="content">
+              <div class="header"><div class="product-name roboto-semi-bold-black-18px">{{p.name}}</div></div>
+              <div class="price roboto-semi-bold-black-20px">${{p.price}}</div>
+            </div>
+            <!--<div class="text-2 roboto-normal-white-14px">⭐⭐⭐⭐⭐</div>-->
+            <a href="{% url 'edit_preset' p.id %}">
+              <div class="button"><div class="edit-2 roboto-normal-white-16px">Edit</div></div></a
+            >
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="content-item">
+        <div class="your-library">Your library</div>
+        <img class="vector-1" src="{% static 'img/vector-1-4@2x.png' %}" alt="Vector 1" />
+        <div class="products">
+          {% for i in library %}
+          <div class="product">
+            <img class="placeholder-image" src="{{i.product.cover.url}}" alt="Placeholder / Image" />
+            <div class="content">
+              <div class="header"><div class="product-name roboto-semi-bold-black-18px">{{i.product.name}}</div></div>
+            </div>
+            <!--<div class="text-2 roboto-normal-white-14px">⭐⭐⭐⭐⭐</div>-->
+            <a href="{{i.product.file.url}}">
+              <div class="button"><div class="download roboto-normal-white-16px">Download</div></div></a
+            >
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

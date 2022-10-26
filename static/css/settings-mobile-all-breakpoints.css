@@ -1,0 +1,555 @@
+/* screen - settings-desktop */
+
+.settings-desktop {
+  align-items: center;
+  background-color: var(--concrete);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  height: 100vh;
+  min-height: 1290px;
+  min-width: 1280px;
+  padding: 12px 0px;
+  width: 100%;
+}
+
+.settings-desktop .content {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding: 0px 64px;
+}
+
+.settings-desktop .settings {
+  letter-spacing: 0;
+  line-height: 50.4px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .line-1 {
+  align-self: stretch;
+  height: 1px;
+  min-width: 1152px;
+}
+
+.settings-desktop .settings-section {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  gap: 30px;
+  height: 1178px;
+  padding: 25px 0px 0px;
+}
+
+.settings-desktop .sidebar {
+  align-items: center;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  width: fit-content;
+}
+
+.settings-desktop .profile {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 38.4px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .profile-image {
+  height: 220px;
+  min-width: 220px;
+  object-fit: cover;
+}
+
+.settings-desktop .hidden_input {
+  visibility: hidden;
+}
+
+.settings-desktop .place {
+  letter-spacing: 0;
+  line-height: 33.6px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .button {
+  align-items: center;
+  border: 2px solid;
+  border-color: var(--outrageous-orange);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 8px 20px;
+  width: fit-content;
+}
+
+.settings-desktop .update-profile-foto {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .line-2 {
+  align-self: stretch;
+  height: 1153px;
+  min-width: 1px;
+}
+
+.settings-desktop .section {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.settings-desktop .generic-information {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.settings-desktop .header-row {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  gap: 20px;
+}
+
+.settings-desktop .generic-information-1 {
+  letter-spacing: 0;
+  line-height: 38.4px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .buttons {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.settings-desktop .cancel {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .button-1 {
+  align-items: center;
+  background-color: var(--outrageous-orange);
+  border: 2px solid;
+  border-color: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 8px 20px;
+  width: fit-content;
+}
+
+.settings-desktop .save {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .line {
+  align-self: stretch;
+  height: 1px;
+  min-width: 872px;
+}
+
+.settings-desktop .bio {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  height: 156px;
+  padding: 10px;
+}
+
+.settings-desktop .text-2 {
+  align-self: stretch;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  flex: 1;
+  height: 136px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  min-width: 852px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.settings-desktop .text-2::placeholder {
+  color: #4f4f4f99;
+}
+
+.settings-desktop .row {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  gap: 19px;
+}
+
+.settings-desktop .instagram {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .text {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  min-width: 280px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.settings-desktop .text::placeholder {
+  color: #4f4f4f99;
+}
+
+.settings-desktop .fb {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .row-2 {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  gap: 19px;
+}
+
+.settings-desktop .pinterest {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .tiktok {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .tiktok-1 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  gap: 26px;
+  padding: 10px;
+}
+
+.settings-desktop .text-3 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  min-width: 214px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.settings-desktop .text-3::placeholder {
+  color: #4f4f4f99;
+}
+
+.settings-desktop .section-item {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.settings-desktop .user-informatoin {
+  letter-spacing: 0;
+  line-height: 38.4px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .cancel-1 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .save-1 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .section-item-item {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  gap: 19px;
+  width: fit-content;
+}
+
+.settings-desktop .instagram-1 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .fb-1 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .pinterest-1 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .tiktok-2 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  gap: 26px;
+  padding: 10px;
+  width: 300px;
+}
+
+.settings-desktop .password {
+  letter-spacing: 0;
+  line-height: 38.4px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .cancel-2 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .confirm {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .row-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  border: 1px none;
+  display: flex;
+  gap: 19px;
+}
+
+.settings-desktop .instagram-2 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  gap: 26px;
+  padding: 10px;
+}
+
+.settings-desktop .text-1 {
+  background-color: transparent;
+  border: 0;
+  flex: 1;
+  height: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  min-width: 258px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.settings-desktop .text-1::placeholder {
+  color: #4f4f4f99;
+}
+
+.settings-desktop .tiktok-3 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  gap: 26px;
+  padding: 10px;
+}
+
+.settings-desktop .fb-2 {
+  align-items: flex-start;
+  border: 2px solid;
+  border-color: var(--mountain-mist);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  gap: 26px;
+  padding: 10px;
+}
+
+
+
+.settings-desktop .forgot-password {
+  letter-spacing: 0;
+  line-height: 33.6px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .reset-here {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .header-row-1 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  gap: 20px;
+  margin-right: -232.00px;
+  width: 1104px;
+}
+
+.settings-desktop .delete-account {
+  letter-spacing: 0;
+  line-height: 38.4px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.settings-desktop .button-2 {
+  align-items: center;
+  background-color: var(--orange-red);
+  border: 2px solid;
+  border-color: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 8px 20px;
+  width: fit-content;
+}
+
+.settings-desktop .delte-account-here {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}

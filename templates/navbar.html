@@ -1,0 +1,44 @@
+{% load static %}
+
+{% block content %}
+<header class="navbar-dektop-all-breakpoints screen" >
+      <div class="container">
+        <div class="column">
+          <a href="{% url 'home' %}">
+            <img
+            class="nephos_-_-logo-removebg-preview-1"
+            src="{% static 'img/nephos---logo-removebg-preview-1@2x.png' %}"
+            alt="Nephos_-_Logo-removebg-preview 1"
+            />
+        </a>
+          
+        </div>
+        <div class="column-1">
+          <div class="column-2 roboto-normal-eerie-black-16px">
+            <a class="place" href= "{% url 'home' %}">Home</a>
+            <a class="presets" href= "{% url 'presets' %}">Presets</a>
+            <a class="upload-preset" href= "{% url 'preset-add' %}">Upload Preset</a>
+          </div>
+        </div>
+        {% if not request.user.is_authenticated %}
+        <a href="{% url 'login' %}">
+          <div class="button">
+            
+            <div class="become-a-seller roboto-normal-white-16px">Become a seller</div>
+            
+            
+        </div>
+        </a>
+        {% else %}
+        <a href="{% url 'profiles' request.user.username %}">
+            <div class="button">
+              
+              <div class="become-a-seller roboto-normal-white-16px">Profile</div>
+              
+              
+          </div>
+          </a>
+        {% endif %}
+      </div>
+</header>
+{% endblock %}

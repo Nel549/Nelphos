@@ -1,0 +1,128 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<div class="preset-detail-mobile-all-breakpoints screen" >
+    <div class="product-header-7">
+      <div class="content-1 product_data">
+        <input type="hidden" value="{{preset.id}}" class="product_id">
+        {% csrf_token %}
+        <div class="product-1">
+          <div class="row-1">
+            <img class="placeholder-image-2" src="{{preset.cover.url}}" alt="{{preset.name}}" />
+          </div>
+        </div>
+        <div class="column-1">
+          <div class="column-item-1">
+            <div class="breadcrumbs-1">
+              <a href="{% url 'presets' %}" class="presets-1 roboto-normal-black-14px">Presets</a>
+              <img class="icon-3" src="{% static 'img/icon-4@2x.svg' %}" alt="Icon" />
+              <div class="product-name-3 roboto-semi-bold-black-14px">{{preset.name}}</div>
+            </div>
+            <div class="product-name-4 roboto-bold-black-32px">
+              <div class="product-name-5">{{preset.name}}</div>
+              <div class="price-1">${{preset.price}}</div>
+            </div>
+            <div class="product-review-1">
+              <!--<div class="x10-rateings-1 roboto-normal-black-14px">⭐⭐⭐⭐⭐ (10 rateings)</div>-->
+            </div>
+            <div class="form-submit-2">
+              {% if request.user.is_authenticated and request.user == preset.seller %}
+             
+              <a  class="">
+                <div class="button-2"><div class="add-to-cart-1 roboto-normal-white-16px">You sell this product</div></div>
+              </a>
+
+              {% elif request.user.is_authenticated and preset in library and request.user != preset.seller %}
+
+              <a href="{{preset.file.url}}" class="">
+                <div class="button-2"><div class="add-to-cart-1 roboto-normal-white-16px">Download</div></div>
+              </a>
+
+              {% elif request.user.is_authenticated and request.user != preset.seller %}
+
+              <a class="addToCartBtn2">
+                <div class="button-2"><div class="add-to-cart-1 roboto-normal-white-16px">Add to cart</div></div>
+              </a>
+
+              {% else %}
+
+              <a href="{% url 'login' %}" >
+                <div class="button-2"><div class="add-to-cart-1 roboto-normal-white-16px">Add to cart</div></div>
+              </a>
+
+              {% endif %}
+            </div>
+          </div>
+          <div class="column-item-1">
+            <div class="accordion-item-2">
+              <div class="divider-1"></div>
+              <div class="title-1">
+                <div class="details-1 roboto-semi-bold-outrageous-orange-18px">Details</div>
+              
+              </div>
+              <p class="lorem-ipsum-dolor-si-4 roboto-normal-black-16px">
+                {{preset.description}}
+              </p>
+            </div>
+            <div class="accordion-item-2">
+              <div class="divider-1"></div>
+              <div class="title-1">
+                <div class="tags-1 roboto-semi-bold-outrageous-orange-18px">Tags</div>
+                
+              </div>
+              <p class="lightroom-presetsli-1 roboto-normal-black-16px">
+                {% for t in preset.tags.all %}
+
+                    <a href="{% url 'tag' t %}">{{t}}</a>
+
+                {% endfor %}
+              </p>
+            </div>
+            <div class="accordion-item-2">
+              <div class="divider-1"></div>
+              <div class="title-1">
+                <div class="about-the-author-1 roboto-semi-bold-outrageous-orange-18px">About the author</div>
+              
+              </div>
+              <div class="frame-1-1">
+                {% if profile.profileImage %}
+                <img class="placeholder-image-3" src="{{profile.profileImage.url}}" alt="Profile image cover" />
+                {% else %}
+                
+                {% endif %}
+                <p class="lorem-ipsum-dolor-si-5 roboto-normal-black-16px">
+                  {{profile.bio}}
+                </p>
+              </div>
+
+              {% if request.user.is_authenticated and request.user == preset.seller %}
+              <div class="form-submit-3">
+                <a href="{% url 'edit_preset' preset.id %}">
+                  <div class="button-3"><div class="edit-preset-1 roboto-normal-black-16px">Edit preset</div></div></a
+                >
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="column-item-1">    
+            <h2 class=" roboto-bold-black-32px">Reviews</h2>
+            <div class="divider-1"></div>
+            {% for r in reviews%}
+
+            <a href="{% url 'profiles' r.user.username %}" class="roboto-semi-bold-black-18px">{{r.user.username}}: {{r.comment}}</a>
+            <p>{{r.rate}}⭐</p>
+            <p class="roboto-semi-bold-black-14px">{{r.created_at}}</p>
+            <div class="divider-1"></div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

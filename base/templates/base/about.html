@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+
+{% block content %}
+
+<div class="about-desktop-all-breakpoints screen" >
+    <div class="header">
+      <div class="content-1">
+        <div class="generate-a-passive-i roboto-bold-white-56px">Generate a passive income as a photo enthusiast</div>
+        <div class="x-photo roboto-normal-white-18px">Made by a photographer, for photographers</div>
+      </div>
+    </div>
+    <div class="about-company">
+      <div class="content-2">
+        <div class="content">
+          <div class="about-nephos roboto-bold-black-48px">About Nephos</div>
+          <div class="we-know-that-making roboto-normal-black-18px">
+            We know that making money as a photographer is a challenging thing to do, full of impediments and
+            unpleased clients... The expenses are countless: New camera, new lenses, editing software, time. We know
+            that is hard to monetize this skill, and cause of that we have created the Nelphos platform. We help
+            photographers all around the world to generate a passive income online by selling Lightroom presets, their
+            expression of creativity.<br /><br />They do this by using our easy-to-use and simple platform. It is
+            designed to be fast so that you can easily navigate and focus on the primary thing: to upload your
+            presets, get sales and make money.<br /><br />We also want to create a community with the best presets
+            possible, so photographers won’t have to spend hours trying to get the best edit, but choosing a preset
+            from here that will best match it’s needs.<br /><br />Anyone can do it. Let&#39;s spread the creativity
+            and beautify our photos
+          </div>
+        </div>
+      </div>
+      <img
+        class="untitled_design-removebg-preview-1"
+        src="{% static 'img/untitled-design-removebg-preview-1-1@1x.png' %}"
+        alt="Untitled_design-removebg-preview 1"
+      />
+    </div>
+    <div class="cta">
+      <div class="content-3">
+        <div class="content">
+          <div class="ready-for-some-extra-cash roboto-bold-white-48px">Ready for some extra cash?</div>
+          <div class="x-photo roboto-normal-white-18px">Let’s enhance our photos!</div>
+        </div>
+        <div class="actions">
+          <a href="javascript:SubmitForm('form91')">
+            <div class="button"><a href="{% url 'preset-add' %}" class="start-selling roboto-normal-white-16px">Start selling</a></div></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer-mobile-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/change-password-presets-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing-tablet-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login-presets-desktop-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar-dektop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/preset-detail-mobile-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/preset-upload-mobile-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/presets-desktop-all-breakpoints.css' %}" />
+  
+    <link rel="stylesheet" type="text/css" href="{% static 'css/settings-mobile-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cart-mobile-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/change_pass.css' %}" />
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile-owner-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset-password-confirm-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset-password-presets-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset-password-sent-presets-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signin-desktop-all-breakpoints.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styleguide.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/globals.css' %}" />
+
+    <title>
+        {% block title %}Default Title{% endblock %}
+    </title>
+    <style>
+        /* Media query for mobile viewport */
+        @media screen and (max-width: 400px) {
+            #paypal-button-container {
+                width: 100%;
+            }
+        }
+        
+        /* Media query for desktop viewport */
+        @media screen and (min-width: 400px) {
+            #paypal-button-container {
+                width: 250px;
+            }
+        }
+    </style>
+    
+</head>
+<body style="margin: 0; background: #ffffff">
+ 
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %} 
+    
+    
+    {% endblock %}
+    {% include 'footer.html' %}
+    
+    <script src="{% static 'JavaScript/Jquery.js' %}"></script>
+    <script src="{% static 'JavaScript/utils.js' %}"></script>
+</body>
+</html>

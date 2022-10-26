@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+{% block title %}Contact{% endblock %}
+
+
+{% block content %}
+
+<div class="contact-dektop-all-breakpoints screen" >
+    <div class="content">
+      <div class="content-1">
+        <div class="section-title">
+          <div class="create-share-earn nunito-semi-bold-black-16px">Create. Share. Earn</div>
+          <div class="content-2">
+            <div class="contact-us nunito-bold-black-48px">Contact us</div>
+            <div class="wanna-get-in-touch nunito-regular-normal-black-18px">
+              Wanna get in touch? Have a question? Just leave a message down bellow.
+            </div>
+          </div>
+        </div>
+        <form class="form" method="post">
+            {% csrf_token %}
+
+            <div class="input">
+                <div class="input"><div class="email nunito-regular-normal-black-16px">Name</div></div>
+                <div class="input-1">       
+                  {{form.name}}
+                </div>
+
+            </div>
+
+    
+          <div class="input"><div class="email nunito-regular-normal-black-16px">Email</div></div>
+          <div class="input-1">
+            {{form.email}}
+          </div>
+
+          <div class="input">
+            <div class="message nunito-regular-normal-black-16px">Message</div>
+            <div class="input-2">
+              {{form.message}}
+            </div>
+          </div>
+        <input type="submit"  class="button" class="place-1 nunito-regular-normal-white-16px" value="Send">
+
+
+        </form>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
