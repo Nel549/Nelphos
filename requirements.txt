@@ -61,5 +61,3 @@ virtualenv==20.14.1
 websockets==10.3
 whitenoise==6.2.0
 win10toast==0.9
-windows-curses==2.3.0
-yt-dlp==2022.6.29
