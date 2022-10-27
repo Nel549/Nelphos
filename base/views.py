@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import RegisterUserForm, ContanctForm
 
 #email
-
+import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from django.template.loader import render_to_string
@@ -48,7 +48,7 @@ def contact(request):
             subject='Someone wants to contact you!',
             html_content=email)
             try:
-                sg = SendGridAPIClient('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')
+                sg = SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
                 response = sg.send(message)
 
                 print(response.status_code)
