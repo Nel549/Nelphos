@@ -46,8 +46,8 @@ def contact(request):
             email = render_to_string(email_template_name, parameters)
 
             message = Mail(
-            from_email='lightstore23@outlook.com',
-            to_emails='ionbelei549@gmail.com',
+            from_email='email',
+            to_emails='email',
             subject='Someone wants to contact you!',
             html_content=email)
             try:
