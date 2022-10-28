@@ -30,6 +30,9 @@ def contact(request):
         form = ContanctForm(request.POST)
 
         if form.is_valid():
+            pass
+            #I was sending emails using sendgrid API.
+            '''
             name = request.POST['name']
             sender_email = request.POST['email']
             message = request.POST['message']
@@ -48,7 +51,7 @@ def contact(request):
             subject='Someone wants to contact you!',
             html_content=email)
             try:
-                sg = SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
+                sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
                 response = sg.send(message)
 
                 print(response.status_code)
@@ -57,6 +60,8 @@ def contact(request):
                 return redirect('home')
             except Exception as e:
                 print(f"Error here {e}")
+            '''
+            
         
 
     return render(request, 'base/contact.html', {'form': form})

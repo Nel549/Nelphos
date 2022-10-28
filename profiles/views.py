@@ -174,7 +174,7 @@ def password_reset_request(request):
                 }
                 email = render_to_string(email_template_name, parameters)
 
-
+                '''
                 message = Mail(
                 from_email='lightstore23@outlook.com',
                 to_emails=data,
@@ -187,6 +187,8 @@ def password_reset_request(request):
                     return redirect('password_reset_done')
                 except Exception as e:
                     print(e)
+                '''
+                
            
 
     context = {'form': form}
