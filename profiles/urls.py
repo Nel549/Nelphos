@@ -3,7 +3,6 @@ from . import views
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView, PasswordResetDoneView, PasswordResetCompleteView, PasswordResetConfirmView, PasswordResetView
 from django.contrib.auth.forms import SetPasswordForm
 
-from .forms import UserPasswordResetForm, UserNewPasswordForm
 
 urlpatterns = [
     path('profile/<str:name>', views.profile, name='profiles'),

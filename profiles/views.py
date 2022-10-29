@@ -5,10 +5,9 @@ from .models import UserProfile, Cart, Library
 from presets.models import Preset
 from django.contrib.auth.decorators import login_required
 from .forms import EditProfileInformation, EditUserData, EditProfileImage, UserPasswordResetForm
-from django.contrib.auth.forms import PasswordResetForm
 #email
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
+#from sendgrid import SendGridAPIClient
+#from sendgrid.helpers.mail import Mail
 from django.template.loader import render_to_string
 from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes

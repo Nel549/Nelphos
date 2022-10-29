@@ -3,10 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import RegisterUserForm, ContanctForm
 
 #email
-import os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
-from django.template.loader import render_to_string
+#from sendgrid import SendGridAPIClient
+#from sendgrid.helpers.mail import Mail
 from presets.models import Preset
 
 # Create your views here.
