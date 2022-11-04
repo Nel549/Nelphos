@@ -12,10 +12,6 @@ from presets.models import Preset
 def home(request):
     presets = Preset.objects.all()[:4]
 
-    for p in presets:
-        print(p)
-
-
     return render(request, 'base/home.html', {'presets': presets})
 
 def about(request):
