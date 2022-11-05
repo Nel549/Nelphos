@@ -73,8 +73,6 @@ def settings(request, name):
 
         elif request.POST.get('Save information'):
             form_user_data = EditUserData(request.POST, request.FILES, instance=profile)
-            if not request.POST['image']:
-                print('uysdfasdf')
             if form_user_data.is_valid():
                 form_image.save()
             
