@@ -74,7 +74,7 @@ def settings(request, name):
         elif request.POST.get('Save information'):
             form_user_data = EditUserData(request.POST, request.FILES, instance=profile)
             if form_user_data.is_valid():
-                form_image.save()
+                form_user_data.save()
             
                 return redirect('profiles', request.user)
             else:
