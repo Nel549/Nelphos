@@ -72,7 +72,7 @@ def settings(request, name):
                 print(form_profile_information.errors)
 
         elif request.POST.get('Save information'):
-            form_user_data = EditUserData(request.POST, request.FILES, instance=profile)
+            form_user_data = EditUserData(request.POST,  instance=request.user)
             if form_user_data.is_valid():
                 form_user_data.save()
             
